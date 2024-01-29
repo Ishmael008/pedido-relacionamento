@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de namoro</title>
+</head>
+
+<style>
+    body {
+        background-color: crimson;
+        color: white;
+        text-align: center;
+    }
+
+    input {
+        width: 20%;
+        height: 40px;
+        font-size: 15pt;
+        background: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    input:focus {
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+        outline: 0;
+    }
+
+    button {
+        background-color: white;
+        color: crimson;
+        border-radius: 10px;
+        width: 20%;
+        height: 40px;
+        font-size: 14pt;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: crimson;
+        color: white;
+        border: solid 1px white;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4;
+    }
+</style>
+
+<body>
+
+    <div>
+        <h1>Você aceita namorar, comigo?</h1>
+
+        <input type="text" id="resposta" placeholder="Escreva sua resposta" maxlength="3" minlength="3" required>
+
+        <button id="butao" onclick="EnviarResposta()">Enviar reposta</button>
+    </div>
+    <script>
+        function EnviarResposta() {
+            var resposta = document.getElementById('resposta');
+
+            if (resposta.value == 'NAO' || resposta.value == 'NÃO' || resposta.value == 'Nao' || resposta.value == 'Não') {
+                document.getElementById('resposta').value = '';
+                alert('Adios! 😞😞😞😞😞😞😞😞😞😞😞😞')
+            } else {
+                alert('AAAAAAAAAAAAAAAAAAAAAAAAAAA TE AMO ❤❤❤❤❤❤❤❤❤❤')
+            }
+        }
+    </script>
+</body>
+
+</html>
